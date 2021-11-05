@@ -76,10 +76,19 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks.withType(JavaExec).configureEach {
   javaLauncher.set runtimeLauncher
+  if (runtimeVersion > 8) {
+    // Allow reflection
+    jvmArgs += ['--add-opens', 'java.base/java.lang=ALL-UNNAMED']
+    // todo: configure create start scripts
+  }
 }
 
 tasks.withType(Test).configureEach {
   javaLauncher.set testRuntimeLauncher
+  if (testRuntimeVersion > 8) {
+    // Allow reflection
+    jvmArgs += ['--add-opens', 'java.base/java.lang=ALL-UNNAMED']
+  }
 }
 
 tasks.withType(GroovyCompile).configureEach {
