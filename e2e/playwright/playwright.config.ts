@@ -4,6 +4,7 @@ const config: PlaywrightTestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   use: {
+    baseURL: "http://localhost:10000",
     trace: "on-first-retry",
   },
   projects: [
