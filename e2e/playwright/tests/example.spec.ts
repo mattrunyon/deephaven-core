@@ -5,27 +5,27 @@ test("basic test", async ({ page }) => {
 
   await expect(page).toHaveTitle("Deephaven");
 
+  const consoleInput = page.locator(".console-input");
+
   // Click .console-input
-  await page.click(".console-input");
+  await consoleInput.click();
 
   // Read csv example data
-  await page.type(".console-input textarea", "from deephaven import read_csv");
-  await page.press(".console-input textarea", "Shift+Enter");
-  await page.type(
-    ".console-input textarea",
+  await consoleInput.type("from deephaven import read_csv");
+  await consoleInput.press("Shift+Enter");
+  await consoleInput.type(
     'source = read_csv("https://media.githubusercontent.com/media/deephaven/examples/main/MetricCentury/csv/metriccentury.csv")'
   );
-  await page.press(".console-input textarea", "Enter");
+  await consoleInput.press("Enter");
 
   // Console input should clear
-  await expect(page.locator(".console-input textarea")).toHaveText("");
+  await expect(consoleInput.locator("textarea")).toHaveText("");
 
   // Now click on the grid that was created
-  await page.click(".iris-grid-panel canvas");
+  const grid = page.locator(".iris-grid-panel canvas");
+  await grid.click();
 
-  expect(
-    await page.locator(".iris-grid-panel canvas").screenshot()
-  ).toMatchSnapshot("iris-grid-source.png");
+  expect(await grid.screenshot()).toMatchSnapshot("iris-grid-source.png");
 
   // Make sure the title is correct
   await expect(
@@ -34,23 +34,19 @@ test("basic test", async ({ page }) => {
 
   // Now create a plot
   // Click .console-input
-  await page.click(".console-input");
+  await consoleInput.click();
 
   // Enter commands to create a plot from the previous data
-  await page.type(".console-input textarea", "from deephaven import Plot");
-  await page.press(".console-input textarea", "Shift+Enter");
-  await page.type(
-    ".console-input textarea",
+  await consoleInput.type("from deephaven import Plot");
+  await consoleInput.press("Shift+Enter");
+  await consoleInput.type(
     'plot_single = Plot.plot("Distance",  source.where("SpeedKPH > 0"), "Time", "DistanceMeters").show()'
   );
-  await page.press(".console-input textarea", "Enter");
+  await consoleInput.press("Enter");
 
   // Wait for the plot lines to appear
-  await page.waitForSelector(
-    ".iris-chart-panel .cartesianlayer .scatterlayer .trace.scatter"
-  );
+  const plot = page.locator(".iris-chart-panel .cartesianlayer");
+  await plot.locator(".scatterlayer .trace.scatter").waitFor();
 
-  expect(
-    await page.locator(".iris-chart-panel .cartesianlayer").screenshot()
-  ).toMatchSnapshot("iris-chart-plot_single.png");
+  expect(await plot.screenshot()).toMatchSnapshot("iris-chart-plot_single.png");
 });
