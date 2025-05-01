@@ -56,7 +56,7 @@ jetbrains = "26.0.1"
 jetty = "12.0.18"
 jetty11 = "11.0.20"
 jpy = "1.1.0"
-jsinterop = "2.0.2"
+jsinterop = "2.1.0"
 # google is annoying, and have different versions released for the same groupId
 jsinterop-base = "1.0.3"
 logback = "1.5.17"
