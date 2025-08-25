@@ -1,0 +1,1 @@
+{"file":"getting-started/quickstart.md","objects":{"exchange_count":{"type":"Table","data":{"columns":[{"name":"Exchange","type":"java.lang.String"},{"name":"Count","type":"long"}],"rows":[[{"value":"bitfinex"},{"value":"4"}],[{"value":"binance"},{"value":"3"}],[{"value":"gemini"},{"value":"1"}],[{"value":"coinbase-pro"},{"value":"3"}],[{"value":"bitstamp"},{"value":"2"}]]}}}}

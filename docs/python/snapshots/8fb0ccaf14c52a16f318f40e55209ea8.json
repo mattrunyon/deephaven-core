@@ -1,0 +1,1 @@
+{"file":"reference/query-language/types/periods.md","objects":{"source":{"type":"Table","data":{"columns":[{"name":"Timestamp","type":"java.time.Instant"}],"rows":[[{"value":"2025-08-23 16:44:08.727"}]]}}}}

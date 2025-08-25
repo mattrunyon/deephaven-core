@@ -1,0 +1,1 @@
+{"file":"getting-started/quickstart.md","objects":{"instrument_avg":{"type":"Table","data":{"columns":[{"name":"Instrument","type":"java.lang.String"},{"name":"Price","type":"double"}],"rows":[[{"value":"PAXG/USD"},{"value":"1,790.1833"}],[{"value":"BTC/USD"},{"value":"55,211.0600"}],[{"value":"ETH/USD"},{"value":"3,458.9000"}]]}}}}

@@ -1,0 +1,1 @@
+{"file":"how-to-guides/table-listeners-python.md","objects":{"source":{"type":"Table","data":{"columns":[{"name":"Timestamp","type":"java.time.Instant"},{"name":"X","type":"int"}],"rows":[]}},":log":{"type":"Log","data":"FUNCTION LISTENER for even values: update={added={}, removed={}, modified={}, shifted={}, modifiedColumnSet={EMPTY}}\nis_replay=True\n"}}}

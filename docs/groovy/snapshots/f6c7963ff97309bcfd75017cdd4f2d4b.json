@@ -1,0 +1,1 @@
+{"file":"tutorials/crash-course/create-tables.md","objects":{"newTickingTable":{"type":"Table","data":{"columns":[{"name":"Timestamp","type":"java.time.Instant"},{"name":"TimestampPlusOneSecond","type":"java.time.Instant"}],"rows":[]}}}}
