@@ -1,0 +1,1 @@
+{"file":"tutorials/crash-course/table-ops.md","objects":{"tAvg":{"type":"Table","data":{"columns":[{"name":"X","type":"double"},{"name":"Y","type":"double"}],"rows":[[{"value":"50.0900"},{"value":"5.3417"}]]}}}}

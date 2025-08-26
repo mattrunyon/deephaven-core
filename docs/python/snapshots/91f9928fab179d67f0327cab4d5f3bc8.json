@@ -1,0 +1,1 @@
+{"file":"reference/cheat-sheets/time-cheat-sheet.md","objects":{"t":{"type":"Table","data":{"columns":[{"name":"CurrentTime","type":"java.time.Instant"},{"name":"CurrentDate","type":"java.lang.String"},{"name":"CurrentTimeZone","type":"java.lang.String"}],"rows":[[{"value":"2025-08-22 16:46:13.810"},{"value":"2025-08-22"},{"value":"Etc/UTC"}]]}}}}
